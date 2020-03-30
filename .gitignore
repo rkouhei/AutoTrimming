@@ -1,0 +1,10 @@
+# input directory
+data/**
+!data/.gitkeep
+
+# output directory
+out/**
+!out/.gitkeep
+
+# setting file
+.vscode/
