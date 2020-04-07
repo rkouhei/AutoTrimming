@@ -9,8 +9,8 @@ def trim_img(img) :
   # cv2.imshow('gray', gray)
 
   # 色空間を二値化
-  img2 = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)[1]
-  # cv2.imshow('img2', img2)
+  img2 = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY)[1]
+  cv2.imshow('img2', img2)
 
   # 輪郭を抽出
   contours = cv2.findContours(img2, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)[0]
@@ -32,9 +32,9 @@ def trim_img(img) :
   y1_min = min(y1)
   x2_max = max(x2)
   y2_max = max(y2)
-  cv2.rectangle(img, (x1_min, y1_min), (x2_max, y2_max), (0, 255, 0), 3)
+  # cv2.rectangle(img, (x1_min, y1_min), (x2_max, y2_max), (0, 255, 0), 3)
 
-  trim_img = img2[y1_min:y2_max, x1_min:x2_max]
+  trim_img = img[y1_min:y2_max, x1_min:x2_max]
   # cv2.imshow('trim_img', trim_img)
 
   return trim_img
