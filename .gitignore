@@ -1,3 +1,6 @@
+# cache
+func/__pycache__
+
 # input directory
 data/**
 !data/.gitkeep
