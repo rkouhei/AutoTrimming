@@ -35,10 +35,10 @@ def correction(img) :
           best_approx = tmp
           max_area = area
     if 0 != max_area:
-        rate = max_area / size * 100
-        if best_rate < rate:
-          best_rate = rate
-          best_white = white
+      rate = max_area / size * 100
+      if best_rate < rate:
+        best_rate = rate
+        best_white = white
     dict_approx.setdefault(white, approxs)
 
   if 0 == best_white:
